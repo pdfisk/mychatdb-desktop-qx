@@ -1,0 +1,6 @@
+# .gitignore template for skeleton-based apps
+/compiled
+/deploy
+/qx_packages
+/node_modules
+.package-cache.json
