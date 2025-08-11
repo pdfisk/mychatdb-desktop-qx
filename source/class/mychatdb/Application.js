@@ -54,7 +54,7 @@ qx.Class.define("mychatdb.Application",
       */
 
       // Create a button
-      var button1 = new qx.ui.form.Button("Click me", "mychatdb/test.png");
+      var button1 = new qx.ui.form.Button("Yo!!!", "mychatdb/test.png");
 
       // Document is the application root
       var doc = this.getRoot();
@@ -65,7 +65,7 @@ qx.Class.define("mychatdb.Application",
       // Add an event listener
       button1.addListener("execute", function() {
         /* eslint no-alert: "off" */
-        alert("Hello World!");
+        alert("Yo DUDE!!!");
       });
     }
   }
