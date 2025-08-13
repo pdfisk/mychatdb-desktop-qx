@@ -7,12 +7,12 @@ qx.Class.define("mychatdb.data.server.Server", {
 
     members: {
 
-    //     getCode: function (name) {
+    //     getCode (name) {
     //         const record = this.getRecord(name);
     //         if (record) return record.code; else return 'record ' + name + ' not found';
     //     },
 
-    //     getRecord: function (name) {
+    //     getRecord (name) {
     //         return this.getDataMap().get(name);
     //     },
 

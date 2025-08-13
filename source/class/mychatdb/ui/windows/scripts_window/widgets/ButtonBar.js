@@ -3,7 +3,7 @@ qx.Class.define("mychatdb.ui.windows.scripts_window.widgets.ButtonBar", {
 
     members: {
 
-        // addButtons: function () {
+        // addButtons () {
         //     this.addButton("Refresh", this.onRefresh);
         //     this.addButton("Console", this.onConsole);
         // },
@@ -12,7 +12,7 @@ qx.Class.define("mychatdb.ui.windows.scripts_window.widgets.ButtonBar", {
         //     this.getParentWindow().onConsole();
         // },
 
-        // onRefresh: function () {
+        // onRefresh () {
         //     this.getParentWindow().onRefresh();
         // }
 

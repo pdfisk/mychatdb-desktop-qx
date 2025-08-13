@@ -8,7 +8,7 @@ qx.Class.define("mychatdb.ui.windows.console.widgets.ContentPanel", {
 
     members: {
 
-        addChildPanels: function () {
+        addChildPanels () {
             this.setEditorPanel(new mychatdb.ui.widgets.EditorPanel(this.getParentWindow()));
             this.setTranscriptPanel(new mychatdb.ui.widgets.TranscriptPanel(this.getParentWindow()));
             this.add(this.getEditorPanel(), 1);

@@ -6,7 +6,7 @@ qx.Class.define("mychatdb.ui.windows.scripts_window.ScriptsWindow", {
   },
 
   members: {
-    // addContent: function () {
+    // addContent () {
     //   this.setContentPanel(
     //     new mychatdb.ui.windows.scripts_window.widgets.ContentPanel(this)
     //   );
@@ -17,12 +17,12 @@ qx.Class.define("mychatdb.ui.windows.scripts_window.ScriptsWindow", {
     //   this.add(this.getContentPanel(), { edge: "center" });
     // },
 
-    // clear: function () {
+    // clear () {
     //   this.setSelectedCode("");
     //   this.setCode("");
     // },
 
-    // defaultCaption: function () {
+    // defaultCaption () {
     //   return "Scripts Browser";
     // },
 
@@ -62,7 +62,7 @@ qx.Class.define("mychatdb.ui.windows.scripts_window.ScriptsWindow", {
     //   consoleWindow.show();
     // },
 
-    // onRefresh: function () {
+    // onRefresh () {
     //   this.refresh();
     // },
 
@@ -73,12 +73,12 @@ qx.Class.define("mychatdb.ui.windows.scripts_window.ScriptsWindow", {
     //   this.setCode(code);
     // },
 
-    // refresh: function () {
+    // refresh () {
     //   this.clear();
     //   this.getListPanel().refresh();
     // },
 
-    // setCode: function (text) {
+    // setCode (text) {
     //   return this.getCodePanel().setValue(text);
     // },
   },

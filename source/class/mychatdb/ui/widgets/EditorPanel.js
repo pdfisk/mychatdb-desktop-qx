@@ -1,7 +1,7 @@
 qx.Class.define("mychatdb.ui.widgets.EditorPanel", {
   extend: qx.ui.container.Composite,
 
-  construct: function () {
+  construct () {
     this.base(arguments);
     // this.initialize();
   },
@@ -14,7 +14,7 @@ qx.Class.define("mychatdb.ui.widgets.EditorPanel", {
   },
 
   members: {
-    // initialize: function () {
+    // initialize () {
     //   this.addListener("appear", this.onAppear, this);
     // },
 
@@ -40,7 +40,7 @@ qx.Class.define("mychatdb.ui.widgets.EditorPanel", {
     //   this.setInitValue("");
     // },
 
-    // clear: function () {
+    // clear () {
     //   this.setValue("");
     // },
 

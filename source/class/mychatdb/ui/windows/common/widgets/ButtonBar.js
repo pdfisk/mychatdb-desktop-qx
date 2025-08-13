@@ -1,7 +1,7 @@
 qx.Class.define("mychatdb.ui.widgets.ButtonBar", {
     extend: qx.ui.container.Composite,
 
-    construct: function (parentWindow) {
+    construct (parentWindow) {
         this.base(arguments);
         // this.initialize(parentWindow);
     },
@@ -12,7 +12,7 @@ qx.Class.define("mychatdb.ui.widgets.ButtonBar", {
 
     members: {
 
-        // initialize: function (parentWindow) {
+        // initialize (parentWindow) {
         //     this.setParentWindow(parentWindow);
         //     this.setBackgroundColor();
         //     this.setHeight(mychatdb.constants.SizeConstants.ButtonBarHeight);
@@ -26,15 +26,15 @@ qx.Class.define("mychatdb.ui.widgets.ButtonBar", {
         //     this.add(button);
         // },
 
-        // addButtons: function () {
+        // addButtons () {
         // },
 
-        // setBackgroundColor: function () {
+        // setBackgroundColor () {
         //     const backgroundColor = mychatdb.constants.ColorConstants.ButtonBarBackground;
         //     this.getContentElement().setStyle('backgroundColor', backgroundColor);
         // },
 
-        // setHBoxLayout: function () {
+        // setHBoxLayout () {
         //     const layout = new qx.ui.layout.HBox(7);
         //     this.setLayout(layout);
         // }

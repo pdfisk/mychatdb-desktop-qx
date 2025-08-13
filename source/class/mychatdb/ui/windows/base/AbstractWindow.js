@@ -1,7 +1,7 @@
 qx.Class.define("mychatdb.ui.windows.base.AbstractWindow", {
     extend: qx.ui.window.Window,
 
-    construct: function () {
+    construct () {
         this.base(arguments);
         // this.initialize();
     },
@@ -13,7 +13,7 @@ qx.Class.define("mychatdb.ui.windows.base.AbstractWindow", {
 
     members: {
 
-        // initialize: function () {
+        // initialize () {
         //     this.setCaption(this.defaultCaption());
         //     this.setWidth(mychatdb.constants.SizeConstants.WindowWidth);
         //     this.setHeight(mychatdb.constants.SizeConstants.WindowHeight);
@@ -23,18 +23,18 @@ qx.Class.define("mychatdb.ui.windows.base.AbstractWindow", {
         //     this.addListener('appear', this.onAppear, this);
         // },
 
-        // defaultCaption: function() {
+        // defaultCaption() {
         //   return 'a Window';
         // },
 
-        // addContent: function () {
+        // addContent () {
         // },
 
-        // onAppear: function () {
+        // onAppear () {
         //     this.center();
         // },
 
-        // onSelect: function(key) {
+        // onSelect(key) {
         //     console.log('onSelect: ' + key);
         // }
 

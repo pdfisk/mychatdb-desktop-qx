@@ -3,26 +3,26 @@ qx.Class.define("mychatdb.ui.windows.console.ConsoleWindow", {
 
     members: {
 
-        // addContent: function () {
+        // addContent () {
         //     this.setContentPanel(new mychatdb.ui.windows.console.widgets.ContentPanel(this));
         //     this.setButtonBar(new mychatdb.ui.windows.console.widgets.ButtonBar(this));
         //     this.add(this.getButtonBar(), {edge: 'south'});
         //     this.add(this.getContentPanel(), {edge: 'center'});
         // },
 
-        // clearIn: function () {
+        // clearIn () {
         //     this.getEditorPanel().clear();
         // },
 
-        // clearOut: function () {
+        // clearOut () {
         //     this.getTranscriptPanel().clear();
         // },
 
-        // defaultCaption: function () {
+        // defaultCaption () {
         //     return 'Python Console';
         // },
 
-        // getCode: function () {
+        // getCode () {
         //     return this.getEditorPanel().getValue();
         // },
 
@@ -59,7 +59,7 @@ qx.Class.define("mychatdb.ui.windows.console.ConsoleWindow", {
         //     this.prn(mychatdb.constants.Version.timestamp);
         // },
 
-        // prn: function (text) {
+        // prn (text) {
         //     this.getTranscriptPanel().prn(text);
         // },
 

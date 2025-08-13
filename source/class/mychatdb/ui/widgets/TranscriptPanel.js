@@ -1,19 +1,19 @@
 qx.Class.define("mychatdb.ui.widgets.TranscriptPanel", {
     extend: qx.ui.form.TextArea,
 
-    construct: function () {
+    construct () {
         this.base(arguments);
         // this.initialize();
     },
 
     members: {
 
-        // initialize: function () {
+        // initialize () {
         //     this.addListener('appear', this.onAppear, this);
         //     this.clear();
         // },
 
-        // clear: function () {
+        // clear () {
         //     this.setValue('');
         // },
 

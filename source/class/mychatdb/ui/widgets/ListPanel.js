@@ -1,7 +1,7 @@
 qx.Class.define("mychatdb.ui.widgets.ListPanel", {
     extend: qx.ui.list.List,
 
-    construct: function (parentWindow) {
+    construct (parentWindow) {
         this.base(arguments);
         // this.initialize(parentWindow);
     },
@@ -12,27 +12,27 @@ qx.Class.define("mychatdb.ui.widgets.ListPanel", {
 
     members: {
 
-        // initialize: function (parentWindow) {
+        // initialize (parentWindow) {
         //     this.setParentWindow(parentWindow);
         //     this.getSelection().addListener("change", this.onSelect, this);
         // },
 
-        // clear: function () {
+        // clear () {
         //     this.setValues([]);
         // },
 
-        // refresh: function () {
+        // refresh () {
         //     this.clear();
         // },
 
-        // onSelect: function () {
+        // onSelect () {
         //     const selection = this.getSelection();
         //     if (!selection) return;
         //     const name = selection.getItem(0).toString();
         //     this.getParentWindow().onSelect(name);
         // },
 
-        // setValues: function (rawData) {
+        // setValues (rawData) {
         //     const model = qx.data.marshal.Json.createModel(rawData);
         //     this.setModel(model);
         // }

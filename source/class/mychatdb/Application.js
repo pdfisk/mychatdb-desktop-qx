@@ -4,19 +4,11 @@ qx.Class.define("mychatdb.Application",
 
     members:
     {
-
-      main: function () {
+      main() {
         this.base(arguments);
-
-        var button1 = new qx.ui.form.Button("Yo AGAIN DUDE!");
-
-        var doc = this.getRoot();
-        doc.add(button1, { left: 100, top: 50 });
-
-        button1.addListener("execute", function () {
-          alert("Yo THERE AGAIN DUDE!!!");
-        });
+        const viewport = new mychatdb.ui.viewport.Viewport;
+        this.getRoot().add(viewport, { top: 0, right: 0, bottom: 0, left: 0 });
       }
-
     }
+
   });

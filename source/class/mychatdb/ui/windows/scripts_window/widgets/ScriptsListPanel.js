@@ -7,16 +7,16 @@ qx.Class.define("mychatdb.ui.windows.scripts_window.widgets.ScriptsListPanel", {
 
     members: {
 
-        // initialize: function (parentWindow) {
+        // initialize (parentWindow) {
         //     this.base(arguments, parentWindow);
         //     this.setServer(new mychatdb.data.server.Server());
         // },
 
-        // clear: function () {
+        // clear () {
         //     this.setValues([]);
         // },
 
-        // refresh: function () {
+        // refresh () {
         //     this.base(arguments);
         //     const fn = (data) => {
         //         this.setValues(data);
@@ -24,7 +24,7 @@ qx.Class.define("mychatdb.ui.windows.scripts_window.widgets.ScriptsListPanel", {
         //     this.getServer().getScripts(fn);
         // },
 
-        // setValues: function (rawData) {
+        // setValues (rawData) {
         //     const model = qx.data.marshal.Json.createModel(rawData);
         //     this.setModel(model);
         // }
