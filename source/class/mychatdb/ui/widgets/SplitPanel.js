@@ -3,27 +3,27 @@ qx.Class.define("mychatdb.ui.widgets.SplitPanel", {
 
     construct (parentWindow) {
         this.base(arguments);
-        // this.initialize(parentWindow);
+        this.initialize(parentWindow);
     },
 
     properties: {
-        // parentWindow: {init: null}
+        parentWindow: {init: null}
     },
 
     members: {
 
-        // initialize (parentWindow) {
-        //     if (parentWindow) this.setParentWindow(parentWindow);
-        //     this.setOrientation(this.defaultOrientation());
-        //     this.addChildPanels();
-        // },
+        initialize (parentWindow) {
+            if (parentWindow) this.setParentWindow(parentWindow);
+            this.setOrientation(this.defaultOrientation());
+            this.addChildPanels();
+        },
 
-        // addChildPanels () {
-        // },
+        addChildPanels () {
+        },
 
-        // defaultOrientation () {
-        //     return 'horizontal';
-        // }
+        defaultOrientation () {
+            return 'horizontal';
+        }
 
     }
 });

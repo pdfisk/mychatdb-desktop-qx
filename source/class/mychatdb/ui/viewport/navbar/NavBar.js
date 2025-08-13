@@ -37,9 +37,8 @@ qx.Class.define("mychatdb.ui.viewport.navbar.NavBar", {
         },
 
         onConsoleClick() {
-            console.log('onConsoleClick');
-            // const consoleWindow = new mychatdb.ui.windows.console.ConsoleWindow;
-            // consoleWindow.show();
+            const consoleWindow = new mychatdb.ui.windows.console.ConsoleWindow;
+            consoleWindow.show();
         },
 
         onScriptsClick() {

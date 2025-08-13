@@ -3,14 +3,14 @@ qx.Class.define("mychatdb.ui.windows.common.CommonWindow", {
 
     members: {
 
-        // addContent () {
-        //     this.setButtonBar(new mychatdb.ui.widgets.ButtonBar(this));
-        //     this.add(this.getButtonBar(), {edge: 'south'});
-        // },
+        addContent () {
+            this.setButtonBar(new mychatdb.ui.widgets.ButtonBar(this));
+            this.add(this.getButtonBar(), {edge: 'south'});
+        },
 
-        // defaultCaption() {
-        //     return 'a Common Window';
-        // },
+        defaultCaption() {
+            return 'a Common Window';
+        },
 
     }
 });
