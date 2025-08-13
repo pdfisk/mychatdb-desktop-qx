@@ -25,9 +25,9 @@ qx.Class.define("mychatdb.ui.viewport.Viewport", {
 
         onAppear() {
             this.addNavigationBar();
-            // setTimeout(() => {
-            // this.addDesktop();
-            // }, 0);
+            setTimeout(() => {
+                this.addDesktop();
+            }, 0);
         },
 
         setBackgroundColor() {
