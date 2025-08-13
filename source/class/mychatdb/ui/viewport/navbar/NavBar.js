@@ -1,53 +1,62 @@
 qx.Class.define("mychatdb.ui.viewport.navbar.NavBar", {
     extend: qx.ui.container.Composite,
 
-    construct () {
+    construct() {
         this.base(arguments);
-        // this.initialize();
+        this.initialize();
     },
 
     members: {
 
-        // initialize () {
-        //     this.setBackgroundColor();
-        //     this.setHBoxLayout();
-        //     this.addButtons();
-        // },
+        initialize() {
+            this.setHBoxLayout();
+            this.addButtons();
+            this.addListener('appear', this.onAppear, this);
+        },
 
-        // addButton (label, handlerFn) {
-        //     const button = new qx.ui.form.Button(label);
-        //     button.addListener("click", handlerFn, this);
-        //     this.add(button);
-        // },
+        addButton(label, handlerFn) {
+            const button = new qx.ui.form.Button(label);
+            button.addListener('click', handlerFn, this);
+            this.add(button);
+        },
 
-        // addButtons () {
-        //     this.addButton('Scripts', this.onScriptsClick);
-        //     this.addButton('Console', this.onConsoleClick);
-        //     this.addButton('Chat', this.onChatClick);
-        // },
+        addButtons() {
+            this.addButton('Scripts', this.onScriptsClick);
+            this.addButton('Console', this.onConsoleClick);
+            this.addButton('Chat', this.onChatClick);
+        },
 
-        // onChatClick () {
-        //     mychatdb.api.QxApi.eval_code('ChatConsole()');
-        // },
+        onAppear() {
+            console.log('onAppear');
+            this.setBackgroundColor();
+        },
 
-        // onConsoleClick () {
-        //     const consoleWindow = new mychatdb.ui.windows.console.ConsoleWindow;
-        //     consoleWindow.show();
-        // },
+        onChatClick() {
+            console.log('onCharClick');
+            // mychatdb.api.QxApi.eval_code('ChatConsole()');
+        },
 
-        // onScriptsClick () {
-        //     const scriptsWindow = new mychatdb.ui.windows.scripts_window.ScriptsWindow;
-        //     scriptsWindow.show();
-        // },
+        onConsoleClick() {
+            console.log('onConsoleClick');
+            // const consoleWindow = new mychatdb.ui.windows.console.ConsoleWindow;
+            // consoleWindow.show();
+        },
 
-        // setBackgroundColor () {
-        //     const backgroundColor = mychatdb.constants.ColorConstants.NavBarBackground;
-        //     this.getContentElement().setStyle('backgroundColor', backgroundColor);
-        // },
+        onScriptsClick() {
+            console.log('onScriptClick');
+            // const scriptsWindow = new mychatdb.ui.windows.scripts_window.ScriptsWindow;
+            // scriptsWindow.show();
+        },
 
-        // setHBoxLayout () {
-        //     const layout = new qx.ui.layout.HBox(7);
-        //     this.setLayout(layout);
-        // }
+        setBackgroundColor() {
+            const backgroundColor = mychatdb.constants.ColorConstants.NavBarBackground;
+            this.getContentElement().setStyle('backgroundColor', backgroundColor);
+        },
+
+        setHBoxLayout() {
+            const layout = new qx.ui.layout.HBox(7);
+            this.setLayout(layout);
+        }
+
     }
 });

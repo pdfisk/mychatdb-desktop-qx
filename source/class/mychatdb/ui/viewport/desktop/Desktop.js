@@ -1,20 +1,20 @@
 qx.Class.define("mychatdb.ui.viewport.desktop.Desktop", {
     extend: qx.ui.container.Composite,
 
-    construct () {
+    construct() {
         this.base(arguments);
-        // this.initialize();
+        this.initialize();
     },
 
     members: {
 
-        // initialize () {
-        //     this.setBackgroundColor();
-        // },
+        initialize() {
+            this.setBackgroundColor();
+        },
 
-        // setBackgroundColor () {
-        //     const backgroundColor = mychatdb.constants.ColorConstants.DesktopBackgroundColor2;
-        //     this.getContentElement().setStyle('backgroundColor', backgroundColor);
-        // }
+        setBackgroundColor() {
+            const backgroundColor = mychatdb.constants.ColorConstants.DesktopBackgroundColor2;
+            this.getContentElement().setStyle('backgroundColor', backgroundColor);
+        }
     }
 });

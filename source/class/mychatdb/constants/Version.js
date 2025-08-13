@@ -1,9 +1,9 @@
-qx.Class.define("mychatdb.constants.Version", {
+qx.Class.define('mychatdb.constants.Version', {
     type: 'static',
 
     statics: {
-        // timestamp: "2025-08-12T14:40:16Z",
-        // version: "1.0.42",
+        timestamp: '2025-08-13T05:19:17Z',
+        version: '1.0.5',
     },
 
 });

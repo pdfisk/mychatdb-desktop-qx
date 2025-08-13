@@ -9,7 +9,6 @@ qx.Class.define("mychatdb.ui.viewport.Viewport", {
     members: {
 
         initialize() {
-            this.setBackgroundColor();
             this.setDockLayout();
             this.addListener('appear', this.onAppear, this);
         },
@@ -25,10 +24,9 @@ qx.Class.define("mychatdb.ui.viewport.Viewport", {
         },
 
         onAppear() {
-            console.log('onAppear');
-            // this.addNavigationBar();
+            this.addNavigationBar();
             // setTimeout(() => {
-                // this.addDesktop();
+            // this.addDesktop();
             // }, 0);
         },
 
