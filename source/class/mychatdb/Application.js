@@ -8,6 +8,8 @@ qx.Class.define("mychatdb.Application",
         this.base(arguments);
         const viewport = new mychatdb.ui.viewport.Viewport;
         this.getRoot().add(viewport, { top: 0, right: 0, bottom: 0, left: 0 });
+        window.LmApi = mychatdb.api.LmApi;
+        window.QxApi = mychatdb.api.QxApi;
       }
     }
 
