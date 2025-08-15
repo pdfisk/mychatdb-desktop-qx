@@ -7,7 +7,7 @@ qx.Class.define("mychatdb.ui.widgets.ListPanel", {
     },
 
     properties: {
-        parentWindow: { init: null };
+        parentWindow: { init: null }
     },
 
     members: {

@@ -8,12 +8,12 @@ qx.Class.define("mychatdb.ui.widgets.TranscriptPanel", {
 
     members: {
 
-        initialize () {
+        initialize() {
             this.addListener('appear', this.onAppear, this);
             this.clear();
         },
 
-        clear () {
+        clear() {
             this.setValue('');
         },
 

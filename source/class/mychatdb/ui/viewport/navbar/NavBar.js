@@ -41,9 +41,8 @@ qx.Class.define("mychatdb.ui.viewport.navbar.NavBar", {
         },
 
         onScriptsClick() {
-            console.log('onScriptClick');
-            // const scriptsWindow = new mychatdb.ui.windows.scripts_window.ScriptsWindow;
-            // scriptsWindow.show();
+            const scriptsWindow = new mychatdb.ui.windows.scripts_window.ScriptsWindow;
+            scriptsWindow.show();
         },
 
         setBackgroundColor() {

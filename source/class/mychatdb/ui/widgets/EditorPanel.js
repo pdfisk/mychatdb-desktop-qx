@@ -60,7 +60,7 @@ qx.Class.define("mychatdb.ui.widgets.EditorPanel", {
         this.setRange();
       }
     },
-    
+
   },
 
 });
