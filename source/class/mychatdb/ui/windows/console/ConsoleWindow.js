@@ -49,7 +49,7 @@ qx.Class.define("mychatdb.ui.windows.console.ConsoleWindow", {
 
         onRun() {
             this.clearOut();
-            mychatdb.api.QxApi.set_std_out(this.getTranscriptPanel());
+            mychatdb.api.QxApi.set_stdout(this.getTranscriptPanel());
             const code = this.getCode();
             this.evalCode(code);
         },

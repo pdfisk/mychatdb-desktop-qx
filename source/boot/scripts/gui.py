@@ -1,9 +1,10 @@
 from browser import window
+import sys
 
 qxapi = window.QxApi
 get_global = qxapi.get_global
 set_global = qxapi.set_global
-
+window.STDOUT = sys.stdout
 
 class SplitPanel:
 

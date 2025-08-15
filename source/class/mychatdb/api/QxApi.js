@@ -20,24 +20,28 @@ qx.Class.define("mychatdb.api.QxApi", {
             return this._dictionary[key];
         },
 
+        get_stdout() {
+            return this._stdout;
+        },
+
         get_timestamp() {
             return mychatdb.constants.Version.timestamp;
         },
 
         make_button(label) {
-            // return new qx.ui.form.Button(label);
+            return new qx.ui.form.Button(label);
         },
 
         make_split_panel() {
-            // return new mychatdb.ui.widgets.SplitPanel();
+            return new mychatdb.ui.widgets.SplitPanel();
         },
 
         make_transcript_panel() {
-            // return new mychatdb.ui.widgets.TranscriptPanel();
+            return new mychatdb.ui.widgets.TranscriptPanel();
         },
 
         make_window() {
-            // return mychatdb.util.WindowManager.make_window();
+            return mychatdb.util.WindowManager.make_window();
         },
 
         pr(text) {
@@ -45,6 +49,7 @@ qx.Class.define("mychatdb.api.QxApi", {
         },
 
         prn(text) {
+            console.log('PRN', text, this._stdout);
             if (this._stdout) this._stdout.prn(text);
         },
 
@@ -59,7 +64,7 @@ qx.Class.define("mychatdb.api.QxApi", {
             this._dictionary[key] = value;
         },
 
-        set_std_out(widget) {
+        set_stdout(widget) {
             this._stdout = widget;
         }
     }

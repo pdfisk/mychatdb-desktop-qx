@@ -26,8 +26,8 @@ qx.Class.define("mychatdb.ui.widgets.EditorPanel", {
       const config = { mode: mode };
       this.setEditor(window.ace.edit(domNode, config));
       this.getEditor().setValue(this.getInitValue());
-      // this.setRange();
-      // this.getEditor().setTheme("ace/theme/dreamweaver");
+      this.setRange();
+      this.getEditor().setTheme("ace/theme/dreamweaver");
       this.getEditor().renderer.on("afterRender", () => {
         this.onRender();
       });
@@ -60,6 +60,7 @@ qx.Class.define("mychatdb.ui.widgets.EditorPanel", {
         this.setRange();
       }
     },
+    
   },
 
 });

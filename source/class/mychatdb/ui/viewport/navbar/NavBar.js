@@ -27,7 +27,6 @@ qx.Class.define("mychatdb.ui.viewport.navbar.NavBar", {
         },
 
         onAppear() {
-            console.log('onAppear');
             this.setBackgroundColor();
         },
 
