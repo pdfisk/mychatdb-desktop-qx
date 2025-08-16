@@ -12,5 +12,8 @@
   "type": "commonjs",
   "devDependencies": {
     "@qooxdoo/compiler": "^1.0.5"
+  },
+  "dependencies": {
+    "@google/genai": "^1.14.0"
   }
 }
