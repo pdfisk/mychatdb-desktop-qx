@@ -3,23 +3,29 @@ qx.Class.define("mychatdb.ui.windows.console.widgets.ButtonBar", {
 
     members: {
 
-        addButtons () {
+        addButtons() {
             this.addButton("Run", this.onRun);
             this.addButton("Clear In", this.onClearIn);
             this.addButton("Clear Out", this.onClearOut);
             this.addButton("Version", this.onVersion);
+            this.addButton("Send", this.onSend);
         },
 
-        onClearIn () {
+        onClearIn() {
             this.getParentWindow().onClearIn();
         },
 
-        onClearOut () {
+        onClearOut() {
             this.getParentWindow().onClearOut();
         },
 
-        onRun () {
+        onRun() {
             this.getParentWindow().onRun();
+        },
+
+        onSend() {
+            console.log('button onSend');
+            this.getParentWindow().onSend();
         },
 
         onVersion() {

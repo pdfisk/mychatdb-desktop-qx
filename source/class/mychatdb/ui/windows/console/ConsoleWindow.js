@@ -54,6 +54,14 @@ qx.Class.define("mychatdb.ui.windows.console.ConsoleWindow", {
             this.evalCode(code);
         },
 
+        onSend() {
+            console.log('window onSend');
+            this.clearOut();
+            mychatdb.api.QxApi.set_stdout(this.getTranscriptPanel());
+            const code = this.getCode();
+            this.sendCode(code);
+        },
+
         onVersion() {
             this.clearOut();
             this.prn(mychatdb.constants.Version.timestamp);
@@ -61,6 +69,10 @@ qx.Class.define("mychatdb.ui.windows.console.ConsoleWindow", {
 
         prn(text) {
             this.getTranscriptPanel().prn(text);
+        },
+
+        sendCode(code) {
+            mychatdb.api.LmApi.send(code);
         },
 
         setValue(code) {
