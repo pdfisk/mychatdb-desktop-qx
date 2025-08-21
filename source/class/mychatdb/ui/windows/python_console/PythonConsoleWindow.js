@@ -1,11 +1,11 @@
-qx.Class.define("mychatdb.ui.windows.console.ConsoleWindow", {
+qx.Class.define("mychatdb.ui.windows.python_console.PythonConsoleWindow", {
     extend: mychatdb.ui.windows.base.AbstractWindow,
 
     members: {
 
         addContent() {
-            this.setContentPanel(new mychatdb.ui.windows.console.widgets.ContentPanel(this));
-            this.setButtonBar(new mychatdb.ui.windows.console.widgets.ButtonBar(this));
+            this.setContentPanel(new mychatdb.ui.windows.python_console.widgets.ContentPanel(this));
+            this.setButtonBar(new mychatdb.ui.windows.python_console.widgets.ButtonBar(this));
             this.add(this.getButtonBar(), { edge: 'south' });
             this.add(this.getContentPanel(), { edge: 'center' });
         },
@@ -55,7 +55,6 @@ qx.Class.define("mychatdb.ui.windows.console.ConsoleWindow", {
         },
 
         onSend() {
-            console.log('window onSend');
             this.clearOut();
             mychatdb.api.QxApi.set_stdout(this.getTranscriptPanel());
             const code = this.getCode();
@@ -76,8 +75,7 @@ qx.Class.define("mychatdb.ui.windows.console.ConsoleWindow", {
         },
 
         setValue(code) {
-            console.log('ConsoleWindow setValue', code);
-            this.getEditorPanel().setValue(code);
+           this.getEditorPanel().setValue(code);
         }
     }
 });

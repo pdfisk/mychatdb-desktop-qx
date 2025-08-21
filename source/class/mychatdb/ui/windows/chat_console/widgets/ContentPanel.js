@@ -1,4 +1,4 @@
-qx.Class.define("mychatdb.ui.windows.console.widgets.ContentPanel", {
+qx.Class.define("mychatdb.ui.windows.chat_console.widgets.ContentPanel", {
     extend: mychatdb.ui.widgets.SplitPanel,
 
     properties: {

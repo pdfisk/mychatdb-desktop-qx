@@ -31,12 +31,12 @@ qx.Class.define("mychatdb.ui.viewport.navbar.NavBar", {
         },
 
         onChatClick() {
-            console.log('onCharClick');
-            // mychatdb.api.QxApi.eval_code('ChatConsole()');
+            const chatWindow = new mychatdb.ui.windows.chat_console.ChatConsoleWindow;
+            chatWindow.show();
         },
 
         onConsoleClick() {
-            const consoleWindow = new mychatdb.ui.windows.console.ConsoleWindow;
+            const consoleWindow = new mychatdb.ui.windows.python_console.PythonConsoleWindow;
             consoleWindow.show();
         },
 

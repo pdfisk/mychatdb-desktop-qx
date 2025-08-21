@@ -57,7 +57,7 @@ qx.Class.define("mychatdb.ui.windows.scripts_window.ScriptsWindow", {
 
     onConsole() {
       const code = this.getCode();
-      const consoleWindow = new mychatdb.ui.windows.console.ConsoleWindow();
+      const consoleWindow = new mychatdb.ui.windows.python_console.PythonConsoleWindow();
       consoleWindow.setValue(code);
       consoleWindow.show();
     },
