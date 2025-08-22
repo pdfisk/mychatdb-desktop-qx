@@ -3,37 +3,44 @@ qx.Class.define("mychatdb.api.LmApi", {
 
     statics: {
         async send(text, fn) {
-            const response = await window.fetch('http://localhost:1234/v1/chat/completions', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': 'Bearer lm-studio'
-                },
-                body: JSON.stringify({
-                    messages: [
-                        { role: 'system', content: 'You are a helpful assistant.' },
-                        { role: 'user', content: text }
-                    ]
-                })
-            });
-            if (!response.ok)
-                throw new Error(`HTTP error! status: ${response.status}`);
-            const data = await response.json();
-            const reply = data.choices[0].message.content;
-            if (typeof (fn) === 'function')
-                fn(reply);
-            else
-                console.log('REPLY: ', reply);
+            const endpoint = mychatdb.constants.LlmConstants.LMS_API_ENDPOINT;
+            const url = endpoint + '/v1/chat/completions';
+            const key = mychatdb.constants.LlmConstants.GEMINI_API_KEY;
+            try {
+                const response = await window.fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer ' + key
+                    },
+                    body: JSON.stringify({
+                        messages: [
+                            { role: 'system', content: 'You are a helpful assistant.' },
+                            { role: 'user', content: text }
+                        ]
+                    })
+                });
+                if (!response.ok)
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                const data = await response.json();
+                const reply = data.choices[0].message.content;
+                if (typeof (fn) === 'function')
+                    fn(reply);
+                else
+                    console.log('REPLY: ', reply);
+            }
+            catch (error) {
+                console.log('ERROR: ', error);
+            };
         }
     }
-
 });
 
 // send2(request, fn) {
 //     console.log('SEND', request);
-//     const endpoint = mychatdb.constants.GoogleConstants.GEMINI_API_ENDPOINT;
+//     const endpoint = mychatdb.constants.LlmConstants.GEMINI_API_ENDPOINT;
 //     const url = endpoint + '/v1/chat/completions';
-//     const key = mychatdb.constants.GoogleConstants.GEMINI_API_KEY;
+//     const key = mychatdb.constants.LlmConstants.GEMINI_API_KEY;
 //     const xhr = new qx.io.request.Xhr;
 //     xhr.setUrl(url);
 //     xhr.setMethod('POST');
@@ -48,8 +55,8 @@ qx.Class.define("mychatdb.api.LmApi", {
 //     xhr.send();
 // },
 // async send3(request, fn) {
-//     const url = 'localhost:1234'; // mychatdb.constants.GoogleConstants.GEMINI_API_ENDPOINT;
-//     const key = mychatdb.constants.GoogleConstants.GEMINI_API_KEY;
+//     const url = 'localhost:1234'; // mychatdb.constants.LlmConstants.GEMINI_API_ENDPOINT;
+//     const key = mychatdb.constants.LlmConstants.GEMINI_API_KEY;
 //     const response = await window.fetch(url, {
 //         method: 'POST',
 //         headers: {
