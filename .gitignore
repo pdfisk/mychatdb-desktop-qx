@@ -3,4 +3,5 @@
 /deploy
 /qx_packages
 /node_modules
+.vs
 .package-cache.json
