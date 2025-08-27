@@ -45,6 +45,7 @@ qx.Class.define("mychatdb.api.QxApi", {
         },
 
         pr(text) {
+            console.log('PR', text, this._stdout);
             if (this._stdout) this._stdout.pr(text);
         },
 
